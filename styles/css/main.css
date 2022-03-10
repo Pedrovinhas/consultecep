@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: #A8A8C7;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../assets/current-location.svg");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: right;
+}
+
+.container section {
+  background: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(13, 13, 14, 0.2);
+          box-shadow: 0 8px 32px 0 rgba(13, 13, 14, 0.2);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  width: 80vw;
+  height: 90vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container section .cep-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40vh;
+  width: 48vw;
+}
+
+.container section .cep-wrapper .cep-result {
+  -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 2rem;
+  background-color: #fed766;
+  width: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-box-shadow: 0 8px 32px 0 rgba(13, 13, 14, 0.2);
+          box-shadow: 0 8px 32px 0 rgba(13, 13, 14, 0.2);
+  border-radius: 1.2rem;
+}
+
+.container section .cep-wrapper .cep-result .cep-card {
+  width: 90%;
+  height: 100%;
+}
+
+.container section .cep-wrapper .cep-result .cep-card ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  list-style: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.container section .cep-wrapper .cep-result .cep-card ul:first-child {
+  padding-top: 2rem;
+}
+
+.container section .cep-wrapper .cep-result .cep-card ul:last-child {
+  padding-bottom: 2rem;
+}
+
+.container section .cep-wrapper .cep-result .cep-card ul li {
+  padding: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container section .cep-wrapper .cep-result .cep-card ul li span {
+  font-weight: 700;
+  margin-right: .8rem;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60%;
+  height: 70vh;
+}
+
+.main .main-title {
+  padding: 2rem;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .main-title h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+  letter-spacing: .2rem;
+}
+
+.main .main-title p {
+  width: 80%;
+  margin-top: 1.6rem;
+  color: white;
+  font-weight: 300;
+}
+
+.main .search-box {
+  margin-left: 2rem;
+  height: 10%;
+  width: 50%;
+  border-radius: 1.2rem;
+  border: .2rem solid white;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .search-box input {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(13, 13, 14, 0.2);
+          box-shadow: 0 8px 32px 0 rgba(13, 13, 14, 0.2);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  color: #424b54;
+  padding: 1.2rem;
+  border: none;
+  font-size: 2rem;
+}
+
+.main .search-box button {
+  width: 30%;
+  height: 100%;
+  cursor: pointer;
+  font-family: 'Montserrat';
+  border: 0rem solid white;
+  border-left: .1rem solid white;
+  color: black;
+  background: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(13, 13, 14, 0.2);
+          box-shadow: 0 8px 32px 0 rgba(13, 13, 14, 0.2);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border-radius: 0 1.2rem 1.2rem 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.main .search-box button:hover {
+  background-color: white;
+}
+/*# sourceMappingURL=main.css.map */

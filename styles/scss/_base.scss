@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+$bg: #A8A8C7;
+$bg-section: #F4F4F8;
+
+$font: 'Montserrat', sans-serif;
+
+@mixin glassmorphism {
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 8px 32px 0 rgba(13, 13, 14, 0.20);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+}

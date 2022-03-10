@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cep</title>
+    <link rel="stylesheet" href="/styles/css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <section class="card">
+        <div class="main">
+          <div class="main-title">
+            <h1>consultecep</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
+              molestiae itaque, sunt officiis, aliquid fuga placeat et, aperiam
+              magnam doloribus obcaecati similique libero ab. Alias in minima
+              nemo iste unde.
+            </p>
+          </div>
+          <div class="search-box">
+            <input id="cep" type="number" />
+            <button id="search">Pesquisar</button>
+          </div>
+        </div>
+        <div class="cep-wrapper">
+          <div class="cep-result">
+            <div class="cep-card">
+              <ul>
+                <li>
+                  <span> CEP: </span>
+                  <p class="cep-number"> </p>
+                </li>
+                <li>
+                  <span> Logradouro: </span>
+                  <p class="logradouro"> </p>
+                </li>
+                <li>
+                  <span> Bairro: </span>
+                  <p class="bairro"> </p>
+                </li>
+                <li>
+                  <span>localidade:</span>
+                  <p class="localidade"> </p>
+                </li>
+                <li>
+                  <span> UF: </span>
+                  <p class="uf"> </p>
+                </li>
+                <li>
+                  <span> DDD: </span>
+                  <p class="ddd"> </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/fetchAPI.js" Access-Control-Allow-Origin: *></script>
+  </body>
+</html>
