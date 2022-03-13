@@ -31,7 +31,7 @@
 
     .search-box {
         margin-left: 2rem;
-        height: 10%;    
+
         
         width: 50%;
         border-radius: 1.2rem;
@@ -54,12 +54,19 @@
             padding: 1.2rem;
             border: none;
             
-            font-size: 2rem;
+            font-size: 1.6rem;
+
+            &:focus {
+                color: #424b54;
+                font-size: 1.6rem;
+
+                background: $bg-section;
+            }
 
             
         }
         button {
-           width: 30%;
+            padding: 1.2rem;
            height: 100%;
            cursor: pointer;
            font-family: 'Montserrat';
@@ -73,7 +80,7 @@
             
            border-radius: 0 1.2rem 1.2rem 0;
            font-weight: 700;
-           font-size: 1.2rem;
+           font-size: 1.6rem;
            transition: .2s ease-in-out;
             
            &:hover {

@@ -34,7 +34,7 @@
         display: grid;
         place-items: center;
         box-shadow: 0 8px 32px 0 rgba(13, 13, 14, 0.2);
-
+        animation: fadeIn .5s;
         border-radius: 1.2rem;
 
         .close {
@@ -77,11 +77,6 @@
             li {
               padding: 0.8rem;
               display: flex;
-             
-
-              p {
-                
-              }
 
               span {
                 animation: fadeIn .5s;
@@ -93,5 +88,14 @@
         }
       }
     }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+     opacity: 1;
   }
 }
