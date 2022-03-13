@@ -6,9 +6,19 @@ const bairro = document.querySelector(".bairro");
 const localidade = document.querySelector(".localidade");
 const uf = document.querySelector(".uf");
 const ddd = document.querySelector(".ddd");
+const closeIcon = document.querySelector('#icon')
+const cepCard = document.querySelector('.cep-result')
+
 
 search.addEventListener("click", () => {
-  getCep();
+  const empty = document.querySelector(".empty-input");
+
+  if (cepInput.value === "") {
+    empty.style.display = "flex";
+  } else {
+    empty.style.display = "none";
+    getCep();
+  }
 });
 
 function getCep() {
@@ -26,9 +36,18 @@ function getCep() {
     )
     .then((response) => {
       const cep = response.data;
+      const error = document.querySelector(".error");
 
+      console.log(response.status);
+
+      if(response.erro = true) {
+        console.log('cheguei aqui')
+        error.style.display = "flex";
+      } else {
+       
       
-      
+      }
+      cepCard.style.visibility = 'visible'
       log.textContent = `${cep.logradouro}`;
       cepNumber.textContent = `${cep.logradouro}`;
       bairro.textContent = `${cep.bairro}`;
@@ -37,7 +56,19 @@ function getCep() {
       localidade.textContent = `${cep.localidade}`;
 
     
+      
+     
+
       console.log(cep);
     })
     .catch((error) => console.log(error));
 }
+
+closeIcon.addEventListener('click', () => {
+  cepCard.style.visibility = 'hidden'
+})
+
+
+
+
+

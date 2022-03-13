@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cep</title>
     <link rel="stylesheet" href="/styles/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
@@ -14,45 +17,51 @@
         <div class="main">
           <div class="main-title">
             <h1>consultecep</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
-              molestiae itaque, sunt officiis, aliquid fuga placeat et, aperiam
-              magnam doloribus obcaecati similique libero ab. Alias in minima
-              nemo iste unde.
-            </p>
           </div>
           <div class="search-box">
-            <input id="cep" type="number" />
+            <input id="cep" type="text" maxlength="9" />
             <button id="search">Pesquisar</button>
+            
+          </div>
+          <div class="empty-input">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <p>O campo está vazio. Insira o seu CEP</p>
+          </div>
+          <div class="error">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <p>Insira um CEP válido</p>
           </div>
         </div>
         <div class="cep-wrapper">
           <div class="cep-result">
+            <div class="close">
+              <i class="fa-solid fa-xmark" id="icon"></i>
+            </div>
             <div class="cep-card">
               <ul>
                 <li>
                   <span> CEP: </span>
-                  <p class="cep-number"> </p>
+                  <p class="cep-number"></p>
                 </li>
                 <li>
                   <span> Logradouro: </span>
-                  <p class="logradouro"> </p>
+                  <p class="logradouro"></p>
                 </li>
                 <li>
                   <span> Bairro: </span>
-                  <p class="bairro"> </p>
+                  <p class="bairro"></p>
                 </li>
                 <li>
                   <span>localidade:</span>
-                  <p class="localidade"> </p>
+                  <p class="localidade"></p>
                 </li>
                 <li>
                   <span> UF: </span>
-                  <p class="uf"> </p>
+                  <p class="uf"></p>
                 </li>
                 <li>
                   <span> DDD: </span>
-                  <p class="ddd"> </p>
+                  <p class="ddd"></p>
                 </li>
               </ul>
             </div>
