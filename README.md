@@ -27,8 +27,9 @@ Esse projeto consome a **API [viaCEP](https://viacep.com.br/)** e permite ao usu
 - [X] Pop-up para mensagem de erro em tela 
 - [X] Adicionar ícone de fechar nas informações do card
 - [ ] Construir o README
+- [ ] Responsividade para todos os aparelhos
 - [ ] Refatoração do código
-<<<<<<< HEAD
+
 
 ## Como usar
 
@@ -45,5 +46,4 @@ $ cd consultecep
 ```
 ---
 > Feito por Pedro Henrique Vinhas 🪐
-=======
->>>>>>> 1c35bddcc9023f8e289c45387545e99878225ee3
+
