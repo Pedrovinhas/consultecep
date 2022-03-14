@@ -20,3 +20,19 @@
 - [X] Adicionar ícone de fechar nas informações do card
 - [ ] Construir o README
 - [ ] Refatoração do código
+
+## Como usar
+
+Para clonar e executar este aplicativo, você precisará do [Git] (https://git-scm.com). Digite no seu terminal:
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/pedrovinhas/consultecep
+
+# Vá para o repositório
+$ cd consultecep
+
+# Abra no navegador ou Live-server
+```
+---
+> Feito por Pedro Henrique Vinhas 🪐
