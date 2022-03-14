@@ -11,26 +11,29 @@ const cepCard = document.querySelector(".cep-result");
 const error = document.querySelector(".error");
 
 cepInput.addEventListener("input", () => {
-  // const regExp = /^([\d]{2})\.?([\d]{3})\-?([\d]{3})/;
-
-  const cepRegexp = cepInput.value
-
-  cepRegexp.replace()
-
-
-
-  // if (cepInput.value.match(regExp)) {
-  //   error.style.display = "flex";
-  // }
+  const regExp = /(\d{3})(\d{3})(\d{3})(\d{2})/g
+  
+  if(cepInput.value.length == 2) {
+    cepInput.value += '.';
+  } else if(cepInput.value.length == 6) {
+    cepInput.value += '-'
+  }
+  
+  if (cepInput.value.match(regExp)) {
+    error.style.display = "flex";
+  }
 });
 
 search.addEventListener("click", () => {
   const empty = document.querySelector(".empty-input");
-
+  
   if (cepInput.value === "") {
     empty.style.display = "flex";
   } else {
     empty.style.display = "none";
+    
+    cepInput.value = cepInput.value.replace(/(\.|\/|\-)/g,"");
+    console.log(cepInput.value)
     getCep();
   }
 });
@@ -55,15 +58,20 @@ const getCep = () => {
       if (cep.hasOwnProperty("erro")) {
         error.style.display = "flex";
         cepCard.style.visibility = "hidden";
+      } else {
+       // console.log(response.status);
+        
+        error.style.display = "none";
+        cepCard.style.visibility = "visible";
+        cepNumber.textContent = `${cep.cep}`;
+        log.textContent = `${cep.logradouro}`;
+        bairro.textContent = `${cep.bairro}`;
+        uf.textContent = `${cep.uf}`;
+        ddd.textContent = `${cep.ddd}`;
+        localidade.textContent = `${cep.localidade}`;
       }
-      console.log(response.status);
-      cepCard.style.visibility = "visible";
-      cepNumber.textContent = `${cep.cep}`;
-      log.textContent = `${cep.logradouro}`;
-      bairro.textContent = `${cep.bairro}`;
-      uf.textContent = `${cep.uf}`;
-      ddd.textContent = `${cep.ddd}`;
-      localidade.textContent = `${cep.localidade}`;
+
+    
     })
     .catch((error) => console.log(error));
 };
